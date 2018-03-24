@@ -5,9 +5,16 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApp {
 	
-	public static void main(String[] args) {
-		ApplicationContext appContext = new ClassPathXmlApplicationContext("beans.xml");
-		HelloWorld obj = (HelloWorld) appContext.getBean("helloWorld");
-		obj.getMessage();
+	public static void main(String[] args) {	
+
+	ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+		
+	HelloWorld objA = (HelloWorld) context.getBean("helloWorld");
+	objA.setMessage("I'm object AAA");
+	objA.getMessage();
+		
+	HelloWorld objB = (HelloWorld) context.getBean("helloWorld");
+	objB.getMessage();
+	
 	}
 }

@@ -4,8 +4,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" default-init-method="init"
 	default-destroy-method="destroy">
 	
-	<bean id="helloWorld" class="com.tutorialspoint.HelloWorld" scope="prototype" init-method="init" destroy-method="destroy">
-		<property name = "message" value = "Hello World!"/>
-	</bean>
+   <bean id = "helloWorld" class = "com.tutorialspoint.HelloWorld"
+      init-method = "init" destroy-method = "destroy">
+      <property name = "message" value = "Hello World!"/>
+   </bean>
+
+   <bean class = "com.tutorialspoint.InitHelloWolrd" />
 
 </beans>

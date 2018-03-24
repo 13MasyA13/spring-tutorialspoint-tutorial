@@ -7,6 +7,10 @@
   
   <modules>
   	<module>core-and-basic-other-modules</module>
+  	<module>spring-aop</module>
+  	<module>spring-jdbc</module>
+  	<module>spring-mvc</module>
+  	<module>spring-web-services</module>
   </modules>
   
   <dependencies>

@@ -1,19 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" default-init-method="init"
-	default-destroy-method="destroy">
-	
-      <bean id="helloWorld" class="com.tutorialspoint.xml_config.HelloWorld">
-      <property name="message1" value="Hello World!"/>
-      <property name="message2" value="Hello Second World!"/>
-  	  </bean>
+<?xml version = "1.0" encoding = "UTF-8"?>
 
-   <bean id="helloAClass" class = "com.tutorialspoint.xml_config.AClass" parent = "helloWorld">
-      <property name="message1" value="Hello Class A[1]!"/>
-      <property name="message3" value="Hello Class A[3]!"/>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean id = "helloWorld" class = "com.tutorialspoint.events.HelloWorld">
+      <property name = "message" value = "Hello World!"/>
    </bean>
 
-   <bean class = "com.tutorialspoint.xml_config.InitHelloWolrd" />
+   <bean id = "cStartEventHandler" class = "com.tutorialspoint.events.CStartEventHandler"/>
+   <bean id = "cStopEventHandler" class = "com.tutorialspoint.events.CStopEventHandler"/>
 
 </beans>

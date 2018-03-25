@@ -4,16 +4,16 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" default-init-method="init"
 	default-destroy-method="destroy">
 	
-      <bean id="helloWorld" class="com.tutorialspoint.HelloWorld">
+      <bean id="helloWorld" class="com.tutorialspoint.xml_config.HelloWorld">
       <property name="message1" value="Hello World!"/>
       <property name="message2" value="Hello Second World!"/>
   	  </bean>
 
-   <bean id="helloAClass" class = "com.tutorialspoint.AClass" parent = "helloWorld">
+   <bean id="helloAClass" class = "com.tutorialspoint.xml_config.AClass" parent = "helloWorld">
       <property name="message1" value="Hello Class A[1]!"/>
       <property name="message3" value="Hello Class A[3]!"/>
    </bean>
 
-   <bean class = "com.tutorialspoint.InitHelloWolrd" />
+   <bean class = "com.tutorialspoint.xml_config.InitHelloWolrd" />
 
 </beans>

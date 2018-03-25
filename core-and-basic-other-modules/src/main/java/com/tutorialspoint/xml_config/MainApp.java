@@ -1,4 +1,4 @@
-package com.tutorialspoint;
+package com.tutorialspoint.xml_config;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

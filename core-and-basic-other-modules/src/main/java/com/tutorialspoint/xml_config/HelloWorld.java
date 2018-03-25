@@ -1,4 +1,4 @@
-package com.tutorialspoint;
+package com.tutorialspoint.xml_config;
 
 public class HelloWorld {
 	

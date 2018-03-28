@@ -1,12 +1,11 @@
 package com.tutorialspoint.xml;
 
 public class Logging {
-	
-	   /** 
+	   /**
 	    * This is the method which I would like to execute
-	    * when any method returns.
+	    * if there is an exception raised.
 	    */
-	   public void afterReturningAdvice(Object retVal){
-	      System.out.println("Returning:" + retVal.toString() );
-	   }
+	   public void afterThrowingAdvice(IllegalArgumentException ex) {
+	      System.out.println("There has been an exception: " + ex.toString());   
+	   } 
 }

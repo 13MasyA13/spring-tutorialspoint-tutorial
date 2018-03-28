@@ -11,7 +11,7 @@
 		<aop:aspect id="log" ref="logging">
 			<aop:pointcut id = "selectAll" 
 	            expression = "execution(* com.tutorialspoint.xml.Student.getAge(..))"/>
-	        <aop:after pointcut-ref="selectAll" method="afterAdvice"></aop:after>
+	        <aop:after-returning pointcut-ref="selectAll" method="afterReturningAdvice" returning="retVal"/>
 		</aop:aspect>
 	</aop:config>
 	

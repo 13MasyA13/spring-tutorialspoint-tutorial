@@ -15,9 +15,10 @@ public class Student {
 		this.name = name;
 	}
 
-	public int getAge() {
-		System.out.println("Age : " + age);
-		return age;
+	public Integer getAge() {
+		   System.out.println("Age : " + age );
+		   System.out.println("Exception raised");
+		   return age;
 	}
 
 	public void setAge(int age) {

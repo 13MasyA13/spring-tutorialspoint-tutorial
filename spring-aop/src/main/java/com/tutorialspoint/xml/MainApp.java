@@ -11,6 +11,6 @@ public class MainApp {
 		
 		Student student = (Student) ctx.getBean("student");
 		
-		student.printThrowException();
+		student.getName();
 	}
 }

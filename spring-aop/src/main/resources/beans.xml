@@ -9,9 +9,9 @@
 	
 	<aop:config>
 		<aop:aspect id="log" ref="logging">
-			<aop:pointcut id = "selectAll" 
-	            expression = "execution(* com.tutorialspoint.xml.Student.getAge(..))"/>
-	        <aop:after-throwing pointcut-ref="selectAll" throwing="ex" method="afterThrowingAdvice"/>
+			<aop:pointcut id = "selectName" 
+	            expression = "execution(* com.tutorialspoint.xml.Student.getName(..))"/>
+	        <aop:around pointcut-ref="selectName" method="aroundAdvice"/>
 		</aop:aspect>
 	</aop:config>
 	

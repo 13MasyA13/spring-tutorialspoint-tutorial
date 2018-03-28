@@ -10,22 +10,15 @@
 	<aop:config>
 		<aop:aspect id="log" ref="logging">
 			<aop:pointcut id = "selectAll" 
-	            expression = "execution(* com.tutorialspoint.*.*(..))"/>
-	         <aop:before pointcut-ref = "selectAll" method = "beforeAdvice"/>
-	         <aop:after pointcut-ref = "selectAll" method = "afterAdvice"/>
-	         <aop:after-returning pointcut-ref = "selectAll" 
-	            returning = "retVal"
-	            method = "afterReturningAdvice"/>
-	         <aop:after-throwing pointcut-ref = "selectAll" 
-	            throwing = "ex"
-	            method = "AfterThrowingAdvice"/>
+	            expression = "execution(* com.tutorialspoint.xml.Student.getName(..))"/>
+	        <aop:before pointcut-ref="selectAll" method="beforeAdvice"></aop:before>
 		</aop:aspect>
 	</aop:config>
 	
 	
 	<bean id="student" class="com.tutorialspoint.xml.Student">
 		<property name="name" value="Mike"></property>
-		<property name="age" value="20"></property>
+		<property name="age" value="21"></property>
 	</bean>
 	
 	<!-- Definition for logging aspect -->

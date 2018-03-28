@@ -13,7 +13,5 @@ public class MainApp {
 		
 		student.getName();
 		student.getAge();
-		
-		student.printThrowException();
 	}
 }
